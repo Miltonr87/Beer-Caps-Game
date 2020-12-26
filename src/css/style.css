@@ -1,0 +1,246 @@
+body {
+	background: rgb(247,154,35);
+	color: white;
+}
+div#board {
+
+	position: relative;
+	width: 1024px;
+	height: 863px;
+	margin: auto;
+}
+
+div#messageArea {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+  color: rgb(83, 175, 19);
+  font-size: xx-large;
+}
+.hit {
+  background: url("../img/beerhit.png") no-repeat center center;
+ 
+
+}
+.miss {
+  background: url("../img/missbeer.png") no-repeat center center;
+ 
+  
+}
+table {
+	border-spacing: 0px; 
+	position: absolute;
+	left: 173px;
+	top: 98px;
+}
+td {
+	width: 94px;
+    height: 94px;
+	text-align: center;
+	font-size: 1.5rem;
+	cursor:pointer;
+  border-radius:3rem;
+	transition: all 0.3s linear;
+	background: #F3AAAA; /* Old browsers */
+    background: -moz-linear-gradient(top, #F3AAAA 0%, #febf04 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F3AAAA), color-stop(100%,#febf04)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* IE10+ */
+    background: linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* W3C */
+}
+form {
+	position: fixed;
+    bottom: 10%;
+    right: 0;
+    color: #fff;
+    padding: 8px 10px;
+    line-height: 1.2;
+    border-radius: 5px 0 0 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.3), inset 0 1px rgba(255,255,255,.6);
+    border: 1px solid rgba(0,0,0,.15);
+    border-right: 0;
+    font-size: 20px;
+    cursor: pointer;
+	background-color: rgb(83, 175, 19);
+}
+form input {
+	background-color: rgb(152, 207, 113);
+	border-color: rgb(83, 175, 19);
+	font-size: 1em;
+}
+
+td:hover {
+    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+.zone {
+    cursor:pointer;
+    transition: all 0.3s linear;
+}
+
+.zone:hover {
+    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+.yellow{
+    background: #F3AAAA; /* Old browsers */
+    background: -moz-linear-gradient(top, #F3AAAA 0%, #febf04 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F3AAAA), color-stop(100%,#febf04)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* IE10+ */
+    background: linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* W3C */
+}
+
+/*=========================================
+              Beer Bubbles
+              created by 
+https://codepen.io/brewcurious/pen/PooaodJ
+=========================================*/
+  
+  .foam {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 150%;
+    height: 150px;
+    background: #fff;
+    filter: blur(10px);
+  }
+  
+  .bubbles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+  }
+  
+  .bubble {
+    position: absolute;
+    bottom: 0;
+    background: #f0f0f0;
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: flying 10s infinite ease-in;
+  }
+  
+  .bubble:before,
+  .bubble:after {
+    position: absolute;
+    content: '';
+  }
+  
+  .bubble:after {
+    width: 95%;
+    height: 95%;
+    background: #fff;
+    opacity: 0.75;
+    border-radius: 50%;
+  }
+  
+  .bubble:nth-child(1) {
+    width: 40px;
+    height: 40px;
+    left: 10%;
+    animation-duration: 8s;
+  }
+  
+  .bubble:nth-child(2) {
+    width: 20px;
+    height: 20px;
+    left: 20%;
+    filter: blur(4px);
+    animation-duration: 5s;
+    animation-delay: 1s;
+  }
+  
+  .bubble:nth-child(3) {
+    width: 50px;
+    height: 50px;
+    left: 30%;
+    animation-duration: 6s;
+    animation-delay: 2s;
+  }
+  
+  .bubble:nth-child(4) {
+    width: 15px;
+    height: 15px;
+    left: 40%;
+    filter: blur(4px);
+    opacity: 0.25;
+    animation-duration: 6s;
+    animation-delay: 1s;
+  }
+  
+  .bubble:nth-child(5) {
+    width: 40px;
+    height: 40px;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 2s;
+  }
+  
+  .bubble:nth-child(6) {
+    width: 65px;
+    height: 65px;
+    left: 60%;
+    animation-duration: 7s;
+    animation-delay: 1s;
+  }
+  
+  .bubble:nth-child(7) {
+    width: 25px;
+    height: 25px;
+    left: 70%;
+    filter: blur(4px);
+    animation-duration: 4s;
+    animation-delay: 1s;
+  }
+  
+  .bubble:nth-child(8) {
+    width: 15px;
+    height: 15px;
+    left: 80%;
+    animation-duration: 3s;
+    animation-delay: 0s;
+  }
+  
+  .bubble:nth-child(9) {
+    width: 35px;
+    height: 35px;
+    left: 90%;
+    filter: blur(4px);
+    opacity: 0.5;
+    animation-duration: 6s;
+    animation-delay: 2s;
+  }
+  
+  @keyframes flying {
+    0% {
+      bottom: -100px;
+      transform: translateX(0);
+    }
+    
+    30% {
+       transform: translateX(50px);
+    }
+    
+    60% {
+       transform: translateX(-35px);
+    }
+  
+    100% {
+      bottom: 1080px;
+      transform: translateX(0px);
+    }
+  }
