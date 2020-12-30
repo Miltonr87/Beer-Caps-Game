@@ -32,10 +32,10 @@ const model = {
 			} else if (index >= 0) {
 				beer.hits[index] = "hit";
 				view.displayHit(guess);
-				view.displayMessage("FOUND A BEER!");
+				view.displayMessage("FOUND A BEER🍺!");
 
 				if (this.isSunk(beer)) {
-					view.displayMessage("You sank my beer!");
+					view.displayMessage("You are DRUNK🍺!");
 					this.beersSunk++;
 				}
 				return true;
@@ -132,7 +132,7 @@ const controller = {
 			this.guesses++;
 			let hit = model.drink(location);
 			if (hit && model.beersSunk === model.numBeers) {
-					view.displayMessage("You sank all my Beers, in " + this.guesses + " guesses");
+					view.displayMessage("Now, you drink all BEERS🍺 in " + this.guesses + " guesses");
 			}
 		}
 	}
