@@ -14,7 +14,9 @@ Beer Caps "guess game" made with pure JS from scratch with nice UI/UX. Adapted f
 
 ### Rules Of The Game:
 
-You need to find 5 beers🍺 caps in 10 shots🎯. Are you a real drinker guy or a nerd one?!
+You need to find 5 beers🍺 caps in 10 shots🎯. The board is mapped with the coordinates from A to G (on the vertical line) and 0 to 6 (on the horizontal line). 
+
+Are you a real drinker guy or a nerd one?!
 
 ### Live Demo 
 
