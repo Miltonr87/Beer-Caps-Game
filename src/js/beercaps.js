@@ -59,7 +59,7 @@ const model = {
 		let locations;
 		for (var i = 0; i < this.numBeers; i++) {
 			do {
-				locations = this.generateShip();
+				locations = this.generateBeer();
 			} while (this.collision(locations));
 			this.beers[i].locations = locations;
 		}
@@ -203,7 +203,7 @@ function init() {
 	guessInput.onkeypress = handleKeyPress;
 
 	// place the ships on the game board
-	model.generateShipLocations();
+	model.generateBeerLocations();
 }
 
 
