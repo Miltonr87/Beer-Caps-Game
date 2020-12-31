@@ -1,8 +1,10 @@
+// MODEL - Here the beer position records are kept (where they are, hit and discovered)
+
 const model = {
 	boardSize: 7,
 	numBeers: 3,
 	beerLength: 3,
-	beerssSunk: 0,
+	beersDrink: 0,
 	
 	beers: [
 		{ locations: [0, 0, 0], hits: ["", "", ""] },
@@ -10,7 +12,7 @@ const model = {
 		{ locations: [0, 0, 0], hits: ["", "", ""] }
 	],
 
-// original hard-coded values for beers locations
+// Original hard-coded values for beers locations
 /*
 	beers: [
 		{ locations: ["06", "16", "26"], hits: ["", "", ""] },
@@ -27,22 +29,22 @@ const model = {
 			// here's an improvement! Check to see if the beer
 			// has already been found, message the user, and return true.
 			if (beer.hits[index] === "hit") {
-				view.displayMessage("Oops, you already hit that location!");
+				view.displayMessage("Oops, you already hit that LOCATION 🎯");
 				return true;
 			} else if (index >= 0) {
 				beer.hits[index] = "hit";
 				view.displayHit(guess);
-				view.displayMessage("FOUND A BEER🍺!");
+				view.displayMessage("Found a BEER 🍺");
 
 				if (this.isSunk(beer)) {
-					view.displayMessage("You are DRUNK🍺!");
-					this.beersSunk++;
+					view.displayMessage("Hat-trick! CHEERS 🍻");
+					this.beersDrink++;
 				}
 				return true;
 			}
 		}
 		view.displayMiss(guess);
-		view.displayMessage("You missed.");
+		view.displayMessage("You MISSED ❌");
 		return false;
 	},
 
@@ -90,6 +92,8 @@ const model = {
 		return newBeerLocations;
 	},
 
+// Collision - try to avoid bugs with beers in same position
+	
 	collision: function(locations) {
 		for (let i = 0; i < this.numBeers; i++) {
 			let beer = this.beers[i];
@@ -104,6 +108,7 @@ const model = {
 	
 }; 
 
+// VIEW - Objective is to keep the display updated with hits, errors and addition messages 
 
 const view = {
 	displayMessage: function(msg) {
@@ -114,14 +119,18 @@ const view = {
 	displayHit: function(location) {
 		const cell = document.getElementById(location);
 		cell.setAttribute("class", "hit");
+		cell.innerHTML = "";
 	},
 
 	displayMiss: function(location) {
 		const cell = document.getElementById(location);
 		cell.setAttribute("class", "miss");
+		cell.innerHTML = "";
 	}
 
 }; 
+
+// CONTROLLER - Connects everything including getting user input and game logic
 
 const controller = {
 	guesses: 0,
@@ -131,7 +140,7 @@ const controller = {
 		if (location) {
 			this.guesses++;
 			let hit = model.drink(location);
-			if (hit && model.beersSunk === model.numBeers) {
+			if (hit && model.beersDrink === model.numBeers) {
 					view.displayMessage("Now, you drink all BEERS🍺 in " + this.guesses + " guesses");
 			}
 		}

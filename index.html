@@ -9,53 +9,54 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Beer Caps Game</title>
 <link rel="stylesheet" type="text/css" href="./src/css/style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap" rel="stylesheet">
 </head>
 <body>
-	
-	<div class="bubbles"></div>
-	<div class="foam"></div>
+
+<!-- Bubbles Effect -->	
+<div class="bubbles"></div>
+<div class="foam"></div>
+
+<!-- Game Board -->	
 <div id="board">
 	
 <div id="messageArea"></div>
 
-
-<table>
-	
-		
-	  	
+<table>	  	
 <tr>
-<td class="zone yellow" id="00"></td> <td class="zone yellow" id="01"></td> <td class="zone yellow" id="02"></td> <td class="zone yellow" id="03"></td>
-<td id="04"></td> <td id="05"></td> <div class="bubble"></div><td id="06"></td>
+<td class="zone yellow" id="00">A0</td> <td class="zone yellow" id="01">A1</td> <td class="zone yellow" id="02">A2</td> <td class="zone yellow" id="03">A3</td>
+<td id="04">A4</td> <td id="05">A5</td> <div class="bubble"></div><td id="06">A6</td>
 </tr>
 <tr>
-<td id="10"></td> <td id="11"></td> <td id="12"><div class="bubble"></div></td> <td id="13"></td>
-<td id="14"></td> <td id="15"><div class="bubble"></div></td> <td id="16"></td>
+<td id="10">B0</td> <td id="11">B1</td> <td id="12">B2<div class="bubble"></div></td> <td id="13">B3</td>
+<td id="14">B4</td> <td id="15">B5<div class="bubble"></div></td> <td id="16">B6</td>
 </tr>
 <tr>
-<td id="20"></td><div class="bubble"></div> <td id="21"></td> <td id="22"></td> <td id="23"></td>
-<td id="24"></td> <td id="25"></td> <td id="26"></td>
+<td id="20">C0</td><div class="bubble"></div> <td id="21">C1</td> <td id="22">C2</td> <td id="23">C3</td>
+<td id="24">C4</td> <td id="25">C5</td> <td id="26">C6</td>
 </tr>
 <tr>
-<td id="30"></td><div class="bubble"></div> <div class="bubble"></div><td id="31"></td> <td id="32"></td><div class="bubble"></div> <td id="33"></td>
-<td id="34"></td> <td id="35"></td> <td id="36"></td>
+<td id="30">D0</td><div class="bubble"></div> <div class="bubble"></div><td id="31">D1</td> <td id="32">D2</td><div class="bubble"></div> <td id="33">D3</td>
+<td id="34">D4</td> <td id="35">D5</td> <td id="36">D6</td>
 </tr>
 <tr>
-<td id="40"></td><div class="bubble"></div> <td id="41"></td> <td id="42"><div class="bubble"></div></td> <td id="43"></td>
-<td id="44"></td> <td id="45"><div class="bubble"></div></td> <td id="46"></td>
+<td id="40">E0</td><div class="bubble"></div> <td id="41">E1</td> <td id="42">E2<div class="bubble"></div></td> <td id="43">E3</td>
+<td id="44">E4</td> <td id="45">E5<div class="bubble"></div></td> <td id="46">E6</td>
 </tr>
 <tr>
-<td id="50"></td> <div class="bubble"></div><td id="51"></td> <td id="52"></td> <div class="bubble"></div><td id="53"></td>
-<td id="54"></td> <td id="55"></td> <td id="56"></td>
+<td id="50">F0</td> <div class="bubble"></div><td id="51">F1</td> <td id="52">F2</td> <div class="bubble"></div><td id="53">F3</td>
+<td id="54">F4</td> <td id="55">F5</td> <td id="56">F6</td>
 </tr>
 <tr>
-<td id="60"></td> <td id="61"></td> <td id="62"></td> <td id="63"></td>
-<td id="64"></td> <td id="65"></td> <td id="66"></td>
+<td id="60">G0</td> <td id="61">G1</td> <td id="62">G2</td> <td id="63">G3</td>
+<td id="64">G4</td> <td id="65">G5</td> <td id="66">G6</td>
 </tr>
 </div>
 </table>
 <form class="zone yellow" >
 	<input type="text" id="guessInput" placeholder="Example.: A0">
-	<input type="button" id="drinkButton" value="🍻">
+	<input type="button" id="drinkButton" value="💬">
 	</form>
 </div>
 

@@ -1,6 +1,6 @@
 ### Beer Caps Game
 
-![Screen Shot](https://github.com/Miltonr87/beer-caps-game/blob/main/beercaps.gif)
+![Screen Shot](https://github.com/Miltonr87/beer-caps-game/blob/main/beercaps.png)
 
 For now this version only includes desktop devices!
 
