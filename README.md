@@ -4,8 +4,6 @@
 
 [X] Desktop version
 
-[] Mobile version 
-
 ### About
 
 Beer Caps "guess game" made with pure JS from scratch with nice UI/UX. Adapted from the concept of complex games like Naval Battleship.
