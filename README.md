@@ -2,8 +2,9 @@
 
 ![Screen Shot](https://github.com/Miltonr87/beer-caps-game/blob/main/beercaps.png)
 
--[X] Desktop version
--[] Mobile version 
+[X] Desktop version
+
+[] Mobile version 
 
 ### About
 
