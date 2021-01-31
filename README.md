@@ -4,7 +4,7 @@
 
 [X] Desktop version
 
-[] Mobile version
+[ ] Mobile version
 
 ### About
 
