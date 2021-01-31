@@ -6,7 +6,7 @@
 
 ### About
 
-Beer Caps "guess game" made with pure JS from scratch with nice UI/UX. Adapted from the concept of complex games like Naval Battleship. Made with MVC model. 
+Beer Caps "guess game" made with pure JS from scratch with nice UI/UX. Made with MVC model in a single file. 
 This was my first step in learning OOP theory and practice before actually using React.
 
 ### Getting Started
