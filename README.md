@@ -6,7 +6,7 @@
 
 ### About
 
-Beer Caps "guess game" made with pure JS from scratch with nice UI/UX uses the MVC pattern. This was my first step in learning OOP theory and practice before using React library.
+Beer Caps "guess game" made with pure JS from scratch with nice UI/UX. This project uses the MVC pattern and it was was my first step learning OOP theory before using React library.
 
 ### Getting Started
 
