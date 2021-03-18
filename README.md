@@ -22,7 +22,7 @@ Are you a real *drinker guy* or a *nerd* one?!
 
 ### Live Demo 
 
-- [LIVE DEMO HERE](https://miltonr87.github.io/beer-caps-game/)
+- [LIVE DEMO HERE](https://miltonr87.github.io/Beer-Caps-Game/)
 
 #### License
 
